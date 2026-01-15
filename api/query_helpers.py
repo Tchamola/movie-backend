@@ -18,10 +18,10 @@ def get_movies(db: Session, skip: int =0, limit: int = 100, title: str = None, g
     query = db.query(models.Movie)
 
     if title:
-        query = query.filter(models.Movie.title.ilike(f"%{title}"))
+        query = query.filter(models.Movie.title.ilike(f"%{title}%"))
 
     if genre:
-        query = query.filter(models.Movie.genres.ilike(f"%{genre}"))
+        query = query.filter(models.Movie.genres.ilike(f"%{genre}%"))
  
     return query.offset(skip).limit(limit).all()
 

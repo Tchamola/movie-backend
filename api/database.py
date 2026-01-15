@@ -23,8 +23,8 @@ Base = declarative_base()
 # # (peut être utile pour le débogage ou la configuration initiale).
 
 # if __name__ == "__main__":
-#     try:
+#      try:
 #         with engine.connect() as conn:
 #             print("Connexion à la base de données réussie.")
-#     except Exception as e:
-#         print(f"Erreur de connexion : {e}") 
+#      except Exception as e:
+#         print(f"Erreur de connexion : {e}")

@@ -1,10 +1,11 @@
+
 #%%
 from database import SessionLocal
 from models import Movie, Rating, Tag, Link
 
 
 db = SessionLocal()
-
+#%%
 ## Tester la récupération de quelques films
 
 movies = db.query(Movie).limit(5).all()
@@ -34,7 +35,7 @@ for rating in Ratings:
 
 else:
     print("No ratings found !")
-
+#%%
 ## Films avec une note supérieure ou égale à 4
 
 high_rated_movies = db.query(Movie).join(Rating).filter(Rating.rating >= 4).limit(5).all()
@@ -52,7 +53,7 @@ hight_rated_movies = (
 
 for title, rating in hight_rated_movies:
     print(title, rating)
-
+#%%
 ## Récupération des tags associés aux films
 
 tags = db.query(Tag).limit(5).all()
@@ -75,3 +76,4 @@ else:
 
 ## Fermer la session de la base de données
 db.close()
+# %%
