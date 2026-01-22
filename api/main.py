@@ -26,6 +26,7 @@ Tous les endpoints supportent la pagination (`skip`, `limit`) et des filtres opt
 - Pour toute erreur (ex : ID inexistant), une réponse claire est retournée avec le bon code HTTP.
 """
 
+
 #....Initialisation de l'application FastAPI
 app = FastAPI(
     title="MovieLens API",
