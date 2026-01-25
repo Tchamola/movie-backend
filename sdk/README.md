@@ -71,7 +71,7 @@ client = MivieClient(config=config)
 ---
 
 ## Licence
-MIT License
+License MIT
 
 ---
 
